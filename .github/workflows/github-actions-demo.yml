@@ -17,7 +17,6 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Test with pytest
         run: |
-	  sudo apt update && sudo apt upgrade
-	  sudo apt install pip
+	  python -m pip install --upgrade pip
 	  pip install pytest
 	  pytest      
